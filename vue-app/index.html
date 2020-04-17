@@ -9,23 +9,4 @@
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
-  <script src="js/md5.min.js"></script>
-  <script>
-
-  let apikey = "1a1f59220896052a0856d1d7c60c752c";
-  let ts = new Date();
-  ts = ts.getUTCMilliseconds();
-  let priKey = "a97ede64f792adc25199c54daf5ff18ab17b28d6";
-  let hash = md5(ts + priKey + apikey).toString();
-
-  console.log('https://gateway.marvel.com/v1/public/characters?ts=' + ts + '&apikey=' + apikey + 'hash=' + hash);
-
-    fetch('https://gateway.marvel.com/v1/public/characters?ts=' + ts + '&apikey=' + apikey + 'hash=' + hash)
-      .then((response) => {
-        return response.json()
-      })
-      .then((data) => {
-        console.log(data)
-      })
-  </script>
 </html>
