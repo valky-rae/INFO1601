@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Slide class="nav">
+    <FallDown class="nav">
       <span>
         <font-awesome-icon class="nav" icon="home" />
         <router-link class="nav" to="/home"> Home</router-link>
@@ -9,18 +9,28 @@
         <font-awesome-icon class="nav" icon="info-circle"/>
         <router-link class="nav" to="/about"> About</router-link>
       </span>
-    </Slide>
+    </FallDown>
+    <main id="page-wrap">
+      <h1> PAGE WRAPPER THINGY </h1>
+      <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <router-view/>
+    </main>
     <!-- <img src="./assets/logo.png"> -->
-    <router-view/>
   </div>
 </template>
 
 <script>
-import { Slide } from 'vue-burger-menu'
+import { FallDown } from 'vue-burger-menu'
 
 export default {
   components: {
-    Slide
+    FallDown
   }
 }
 </script>
