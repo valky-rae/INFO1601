@@ -26,11 +26,18 @@ export default {
 </script>
 
 <style>
+body{
+  background-image: url("../src/assets/backround.jpg");
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 #app {
-  font-family: 'Poppins', sans-serif;
   text-align: center;
   color:white;
   margin-top: 1%;
+  font-family: 'Irish Grover', cursive;
+  /* background-image: url("../src/assets/rick.png"); */
 }
 a {
     font-family: 'Bangers', cursive;

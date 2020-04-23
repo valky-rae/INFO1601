@@ -1,11 +1,6 @@
 <template>
-    <div class="jumbotron">
-
+    <div>
         <h1> Home page </h1>
-        <div>
-            <router-link class="nav" to="/home/daily"> Daily |</router-link>
-            <router-link class="nav" to="/home/search">Searchable</router-link>
-        </div>
     </div>
 </template>
 
@@ -25,9 +20,5 @@ a {
   }
 svg{
   padding-bottom: 100px;
-}
-.jumbotron{
-  /* background-image: url(../assets/banner.jpg); */
-  background-color: blue;
 }
 </style>
