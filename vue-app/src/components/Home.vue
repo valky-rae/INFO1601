@@ -1,24 +1,28 @@
 <template>
-    <div>
+    <div id="home">
         <h1> Home page </h1>
+        <Search>
+        </Search>
     </div>
 </template>
 
-<style scoped>
-.nav {
-  padding: 10px;
-  font-size: 25px;
-  font-weight: bold;
-  color: black;
-}
-a {
-    font-weight: bold;
-    color: black;
-    text-decoration:  none;
-    padding-top: 50px;
-    text-align: bottom;
+<script>
+import Search from '../components/Search'
+export default {
+  components: {
+    Search
+  },
+  methods: {
+    tester: function () {
+      alert('wow')
+    }
   }
-svg{
-  padding-bottom: 100px;
+}
+</script>
+
+<style scoped>
+#home{
+  margin-left: 5%;
+  text-align: center;
 }
 </style>

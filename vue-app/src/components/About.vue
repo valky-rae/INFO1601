@@ -47,7 +47,7 @@
 }
 .card {
   width: 900px;
-  height: 550px;
+  height: 450px;
   margin: 1em;
   perspective: 1500px;
 }
