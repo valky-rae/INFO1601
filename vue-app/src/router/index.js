@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import About from '@/components/About'
 import Home from '@/components/Home'
-import Daily from '@/components/Daily'
 import Search from '@/components/Search'
 
 Vue.use(Router)
@@ -18,11 +17,6 @@ export default new Router({
       path: '/home',
       name: 'Home',
       component: Home
-    },
-    {
-      path: '/home/daily',
-      name: 'Daily',
-      component: Daily
     },
     {
       path: '/home/search',

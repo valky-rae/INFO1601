@@ -38,6 +38,7 @@ body{
   margin-top: 1%;
   font-family: 'Irish Grover', cursive;
   /* background-image: url("../src/assets/rick.png"); */
+  /* overflow: scroll; */
 }
 a {
     font-family: 'Bangers', cursive;

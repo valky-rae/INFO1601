@@ -5,9 +5,9 @@
         <button v-on:click="getCharacter">Search</button>
         <!-- <div id="character"> -->
           <ul>
-            <div id="character" v-for="(character) in results" v-bind:key="character">
+            <div id="character" v-for="(character) in results" v-bind:key="character" style="background-image: url('https://image.freepik.com/free-vector/blue-halftone-comic-background_23-2147915001.jpg')">
               {{ character.name }}
-              <!-- <img :src=character.thumbnail.path '.' character.thumbnail.path /> -->
+              <img class="tiles" :src="character.thumbnail.path + '.' + character.thumbnail.extension " width="200" height="200"/>
             </div>
           </ul>
 
@@ -63,5 +63,10 @@ export default {
   color: white;
   margin: 20px;
   text-align: center;
+}
+.tiles{
+  background-image: center;
+  background-position: center;
+  background-position: cover;
 }
 </style>
