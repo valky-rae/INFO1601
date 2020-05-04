@@ -24,5 +24,6 @@ export default {
 #home{
   margin-left: 5%;
   text-align: center;
+  overflow: hidden;
 }
 </style>

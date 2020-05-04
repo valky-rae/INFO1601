@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import About from '@/components/About'
 import Home from '@/components/Home'
 import Search from '@/components/Search'
+import CharInfo from '@/components/CharInfo'
 
 Vue.use(Router)
 
@@ -21,7 +22,20 @@ export default new Router({
     {
       path: '/home/search',
       name: 'Search',
-      component: Search
+      component: Search,
+
+      children: [
+        {
+          meta: {
+            showModal: true
+          },
+          path: ':charId',
+          name: 'CharInfo',
+          component: CharInfo,
+          props: true
+        }
+      ]
+
     }
   ]
 })
