@@ -2,6 +2,7 @@
   <div id="app">
     <div id="navbar">
       <router-link class="rounded" to="/home"> Home </router-link>
+      <router-link class="rounded" to="/comicSearch"> Comic Search </router-link>
       <router-link class="rounded" to="/about"> About </router-link>
     </div>
     <main>
