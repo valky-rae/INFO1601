@@ -17,20 +17,24 @@
       </div>
       <div id="info">
         <span>{{  character.description  }}</span>
+        <a :href="character.urls[1].url">More Info</a>
       </div>
     </div>
   </div>
-  <div class="char-comics"
-    v-for="comics in allComics"
-    :key="comics.id"
-    style="background-image: url('https://image.freepik.com/free-vector/blue-halftone-comic-background_23-2147915001.jpg; width: 200px; height:200px')"
-  >
-      <!-- {{ getComic() }} -->
-      <!-- {{ comic.title }}<img class="tiles" :src="comic.thumbnail.path + '.' + comic.thumbnail.extension " width="200"/> -->
+  <div v-if="(Array.isArray(allComics) && allComics.length)" class="comics-container">
+    <div class="comic-head">
+      <h2>Comics</h2>
+    </div>
+    <div class="char-comics"
+      v-for="comics in allComics"
+      :key="comics.id"
+      style="background-image: url('https://image.freepik.com/free-vector/blue-halftone-comic-background_23-2147915001.jpg; width: 200px; height:200px')"
+    >
       {{ comics.title }}<img class="tiles" :src="comics.thumbnail.path + '.' + comics.thumbnail.extension " width="200"/>
-      <!-- {{ getComic(comics.resourceURI)  }}
-      {{ comic.description }} -->
-      <!-- <img class="tiles" :src="comic.thumbnail.path + '.' + comic.thumbnail.extension " width="200"/> -->
+    </div>
+    <div class="comic-foot">
+      <a :href="character.urls[2].url">More Comics</a>
+    </div>
   </div>
 </div>
 </template>
@@ -69,7 +73,7 @@ export default {
   methods: {
     getComic: function (path) {
       // makes an api call to a string and returns the result json
-      alert('api fuction called')
+      // alert('api fuction called')
       let ts = new Date()
       ts = ts.getUTCMilliseconds()
       let hash = CryptoJS.MD5(ts + this.privateKey + this.publicKey).toString()
@@ -97,7 +101,6 @@ export default {
 
 <style scoped>
 /* .char {
-  overflow-y: scroll;
 } */
 .char-profile {
     border-radius: 10px;

@@ -5,8 +5,6 @@
         <button v-on:click="getCharacter">Search</button>
         <!-- <div id="character"> -->
           <ul>
-            <!-- <div id="character" v-for="(character) in results" v-bind:key="character" style="background-image: url('https://image.freepik.com/free-vector/blue-halftone-comic-background_23-2147915001.jpg')"> -->
-              <!-- <a :href="character.resourceURI">{{ character.name }}<img class="tiles" :src="character.thumbnail.path + '.' + character.thumbnail.extension " width="200" height="200"/></a> -->
             <div >
               <router-link
                 v-for="character in results" :key="character.id" id="character"
@@ -20,11 +18,11 @@
           </ul>
 
         <!-- </div> -->
-      <div v-if="showModal" class="modal-route">
-        <div class="modal-content">
-          <router-view></router-view>
+        <div v-if="showModal" class="modal-route">
+          <div class="modal-content">
+            <router-view></router-view>
+        </div>
       </div>
-    </div>
     </div>
 </template>
 
@@ -56,7 +54,7 @@ export default {
   methods: {
     getCharacter: function () {
       // makes an api call to a string and returns the result json
-      alert('api fuction called')
+      // alert('api fuction called')
       let ts = new Date()
       ts = ts.getUTCMilliseconds()
       let hash = CryptoJS.MD5(ts + this.privateKey + this.publicKey).toString()
@@ -105,12 +103,12 @@ export default {
   background:transparent;
   overflow-y: auto;
 }
-  .modal-content {
-    width: 50%;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -10%);
-    background: transparent;
-  }
+.modal-content {
+  width: 50%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%);
+  background: transparent;
+}
 </style>
