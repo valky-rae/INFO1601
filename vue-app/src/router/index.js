@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import About from '@/components/About'
 import Home from '@/components/Home'
-import Search from '@/components/Search'
+import CharSearch from '@/components/CharSearch'
 import CharInfo from '@/components/CharInfo'
 import ComicSearch from '@/components/ComicSearch'
 import ComicInfo from '@/components/ComicInfo'
@@ -22,9 +22,9 @@ export default new Router({
       component: Home
     },
     {
-      path: '/home/search',
-      name: 'Search',
-      component: Search,
+      path: '/charSearch',
+      name: 'CharSearch',
+      component: CharSearch,
 
       children: [
         {

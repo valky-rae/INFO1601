@@ -36,9 +36,13 @@ export default {
     // }
     if (this.$route.params.comicId) {
       this.comicId = this.$route.params.comicId
+    } else {
+      this.comicId = 0
     }
     if (this.$route.params.comic) {
       this.comic = this.$route.params.comic
+    } else {
+      this.comic = {}
     }
   }
 }

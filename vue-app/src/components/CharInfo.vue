@@ -12,7 +12,7 @@
   <div class="char-info">
     <div id="heading">
         <h1>{{  character.name  }}</h1>
-        <router-link to="../" style="  position: absolute; right: 0;">X</router-link>
+        <router-link to="/charSearch" style="  position: absolute; right: 0;">X</router-link>
     </div>
     <div id="info">
       <span>{{  character.description  }}</span>

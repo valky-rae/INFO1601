@@ -56,8 +56,8 @@ export default {
       ts = ts.getUTCMilliseconds()
       let hash = CryptoJS.MD5(ts + this.privateKey + this.publicKey).toString()
       console.log(hash)
-      // fetch('https://gateway.marvel.com/v1/public/characters?nameStartsWith=' + this.input + '&ts=' + ts + '&apikey=' + this.publicKey + '&hash=' + hash)
-      fetch('https://gateway.marvel.com/v1/public/comics?titleStartsWith=' + this.input + '&apikey=' + this.publicKey)
+      fetch('https://gateway.marvel.com/v1/public/comics?titleStartsWith=' + this.input + '&ts=' + ts + '&apikey=' + this.publicKey + '&hash=' + hash)
+      // fetch('https://gateway.marvel.com/v1/public/comics?titleStartsWith=' + this.input + '&apikey=' + this.publicKey)
         .then((response) => {
           return response.json()
         })
