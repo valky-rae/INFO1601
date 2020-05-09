@@ -36,6 +36,11 @@ export default {
       immediate: true,
       handler: function (newVal, oldVal) {
         this.showModal = newVal.meta && newVal.meta.showModal
+        if (this.showModal) {
+          document.body.classList.add('modal-open')
+        } else {
+          document.body.classList.remove('modal-open')
+        }
       }
     }
   },
@@ -98,13 +103,14 @@ export default {
   top: 0;
   left: 0;
   background:transparent;
+  overflow-y: auto;
 }
   .modal-content {
     width: 50%;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -10%);
     background: transparent;
   }
 </style>

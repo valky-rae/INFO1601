@@ -35,6 +35,9 @@ body{
   background-size: cover;
   overflow-y: scroll;
 }
+body.modal-open {
+  overflow: hidden;
+}
 #app {
   text-align: center;
   color:white;
