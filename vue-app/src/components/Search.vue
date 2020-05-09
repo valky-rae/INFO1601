@@ -2,15 +2,18 @@
 <template>
     <div>
         <input v-model="input" type="text" placeholder="Enter Character here..."/>
+        <button v-on:click="show" >Test</button>
         <button v-on:click="getCharacter">Search</button>
         <!-- <div id="character"> -->
           <ul>
-            <div id="character" v-for="(character) in results" v-bind:key="character" style="background-image: url('https://image.freepik.com/free-vector/blue-halftone-comic-background_23-2147915001.jpg')">
+            <div id="character" v-for="(character) in results"  v-bind:key="character" style="background-image: url('https://image.freepik.com/free-vector/blue-halftone-comic-background_23-2147915001.jpg')">
+            <div v-on:click="show">
               {{ character.name }}
-              <img class="tiles" :src="character.thumbnail.path + '.' + character.thumbnail.extension " width="200" height="200"/>
+              <img class="tiles"  :src="character.thumbnail.path + '.' + character.thumbnail.extension " width="200" height="200"/>
+              <Modal/>
+            </div>
             </div>
           </ul>
-
         <!-- </div> -->
 
     </div>
@@ -18,7 +21,11 @@
 
 <script>
 import * as CryptoJS from 'crypto-js'
+import Modal from '@/components/TestModal'
 export default {
+  components: {
+    Modal: Modal
+  },
   data: function () {
     return {
       input: '',
@@ -48,10 +55,17 @@ export default {
     },
     getComics: function () {
       // gets comics related to the given character
+    },
+    show () {
+      this.$modal.show('hello-world')
+      console.log('hello')
+    },
+    hide () {
+      this.$modal.hide('hello-world')
+      console.log('close')
     }
   }
 }
-
 </script>
 
 <style scoped>

@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div id="navbar">
+      <router-link class="rounded" to="/ComicSearch">Comic Search </router-link>
       <router-link class="rounded" to="/home"> Home </router-link>
       <router-link class="rounded" to="/about"> About </router-link>
     </div>
@@ -31,6 +32,7 @@ body{
   background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow-y: scroll;
 }
 #app {
   text-align: center;
@@ -83,5 +85,8 @@ footer {
 #Vlogo{
   margin-right: 60px;
  float: right;
+}
+.vm--overlay {
+  background:transparent;
 }
 </style>

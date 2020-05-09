@@ -1,8 +1,7 @@
 <template>
     <div id="home">
         <h1> Home page </h1>
-        <Search>
-        </Search>
+        <router-link to="/home/search">Comic Search</router-link>
     </div>
 </template>
 
