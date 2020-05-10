@@ -16,6 +16,10 @@
     </div>
     <div id="info">
       <span>{{  comic.description  }}</span>
+      <h2>Staff</h2>
+      <div id="creators" v-for="creator in comic.creators.items" :key="creator">
+        <p>{{  creator.name }} - {{  creator.role  }}</p>
+      </div>
     </div>
   </div>
 </div>
