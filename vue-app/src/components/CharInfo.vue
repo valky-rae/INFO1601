@@ -21,7 +21,7 @@
       </div>
     </div>
   </div>
-  <div v-if="(Array.isArray(allComics) && allComics.length)" class="comics-container">
+  <div v-if="character.comics.available > 0" class="comics-container">
     <div class="comic-head">
       <h2>Comics</h2>
     </div>
@@ -65,9 +65,11 @@ export default {
     if (this.$route.params.char) {
       this.character = this.$route.params.char
     }
-    for (this.el in this.character.comics.items) {
-      this.getComic(this.character.comics.items[this.el].resourceURI)
-      console.log(this.character.comics.items[this.el].resourceURI)
+    if (this.character.comics.available > 0) {
+      for (this.el in this.character.comics.items) {
+        this.getComic(this.character.comics.items[this.el].resourceURI)
+        console.log(this.character.comics.items[this.el].resourceURI)
+      }
     }
   },
   methods: {

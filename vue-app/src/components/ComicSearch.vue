@@ -1,31 +1,26 @@
 /* eslint-disable */
 <template>
-    <div>
-        <input v-model="input" type="text" placeholder="Enter Comic here..."/>
-        <button v-on:click="getComic">Search</button>
-        <!-- <div id="character"> -->
-          <ul>
-            <!-- <div id="character" v-for="(character) in results" v-bind:key="character" style="background-image: url('https://image.freepik.com/free-vector/blue-halftone-comic-background_23-2147915001.jpg')"> -->
-              <!-- <a :href="character.resourceURI">{{ character.name }}<img class="tiles" :src="character.thumbnail.path + '.' + character.thumbnail.extension " width="200" height="200"/></a> -->
-            <div >
-              <router-link
-                v-for="comic in results" :key="comic.id" id="comic"
-                tag="div"
-                :to="{ name: 'ComicInfo', params: {comicId: comic.id, comic: comic}}"
-                style="background-image: url('https://image.freepik.com/free-vector/blue-halftone-comic-background_23-2147915001.jpg; width: 200px; height:200px')"
-              >
-                  {{ comic.title }}<img class="tiles" :src="comic.thumbnail.path + '.' + comic.thumbnail.extension " width="200"/>
-                </router-link>
-            </div>
-          </ul>
-
-        <!-- </div> -->
-      <div v-if="showModal" class="modal-route">
-        <div class="modal-content">
-          <router-view></router-view>
+  <div>
+    <input v-model="input" type="text" placeholder="Enter Comic here..."/>
+    <button v-on:click="getComic">Search</button>
+    <ul>
+      <div>
+        <router-link
+          v-for="comic in results" :key="comic.id" id="comic"
+          tag="div"
+          :to="{ name: 'ComicInfo', params: {comicId: comic.id, comic: comic}}"
+          style="background-image: url('https://image.freepik.com/free-vector/blue-halftone-comic-background_23-2147915001.jpg; width: 200px; height:200px')"
+        >
+          {{ comic.title }}<img class="tiles" :src="comic.thumbnail.path + '.' + comic.thumbnail.extension " width="200"/>
+        </router-link>
+      </div>
+    </ul>
+    <div v-if="showModal" class="modal-route">
+      <div class="modal-content">
+        <router-view></router-view>
       </div>
     </div>
-    </div>
+  </div>
 </template>
 
 <script>
@@ -36,6 +31,11 @@ export default {
       immediate: true,
       handler: function (newVal, oldVal) {
         this.showModal = newVal.meta && newVal.meta.showModal
+        if (this.showModal) {
+          document.body.classList.add('modal-open')
+        } else {
+          document.body.classList.remove('modal-open')
+        }
       }
     }
   },
@@ -64,6 +64,7 @@ export default {
         .then((data) => {
           console.log(data)
           this.results = data.data.results
+          console.log(typeof this.results)
           // console.log(data.data.results[0])
         })
       // call get comics
@@ -96,13 +97,14 @@ export default {
   left: 0;
   background:transparent;
   backdrop-filter: blur(5px);
+  overflow-y: auto;
 }
   .modal-content {
     width: 50%;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -10%);
     background: transparent;
   }
 </style>
