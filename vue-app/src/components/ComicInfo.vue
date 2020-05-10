@@ -26,7 +26,8 @@
       <p v-for="creator in comic.creators.items" :key="creator.name">{{  creator.name }} - {{  creator.role  }}</p>
     </div>
   </div>
-  <div v-if="comic.characters.available > 0" class="comic-characters">
+  <div v-if="comic.characters.available > 0" class="comic-container">
+    <h2>Characters</h2>
     <div class="character-profile" v-for="character in allCharacters" :key="character.id">
        {{ character.name }}<img class="tiles" :src="character.thumbnail.path + '.' + character.thumbnail.extension " width="200" height="200"/>
     </div>
@@ -201,6 +202,10 @@ export default {
   margin-right: auto;
   display:inline-block;
 }
+.comic-container {
+  text-align: center;
+  background-color: black;
+}
 .character-profile {
   display: inline-block;
   background-color: black;
@@ -208,7 +213,6 @@ export default {
   width: 200px;
   color: white;
   margin: 20px;
-  text-align: center;
   background-color: blue;
 }
 </style>
