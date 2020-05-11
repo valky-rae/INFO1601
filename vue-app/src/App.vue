@@ -40,7 +40,7 @@ body.modal-open {
   color:white;
   margin-top: 2%;
   margin-bottom: 2%;
-  font-family: 'Bangers', cursive;
+  font-family: 'Acme', cursive;
 }
 a {
     font-family: 'Bangers', cursive;
@@ -80,7 +80,7 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  padding-bottom: 15px;
+  /* padding-bottom: 10px; */
 }
 footer:hover {
   animation: bounce;

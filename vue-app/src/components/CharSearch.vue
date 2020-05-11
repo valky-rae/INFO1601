@@ -101,7 +101,7 @@ export default {
 }
 .tiles:hover{
   animation: pulse;
-  animation-duration: 1s;
+  animation-duration: 3s;
 }
 .modal-route {
   width: 100%;

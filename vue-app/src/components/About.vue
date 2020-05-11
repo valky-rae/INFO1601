@@ -23,7 +23,7 @@
                         Lorum epsum dolor sit amet
                     </div>
                     <div class="p3">
-                        Match Hue Paul <br/>
+                        Matthew Paul <br/>
                         Lorum epsum dolor sit amet
                     </div>
                     <div class="p4">
@@ -49,7 +49,7 @@
 }
 .card {
   width: 900px;
-  height: 450px;
+  height: 400px;
   margin: 1em;
   perspective: 1500px;
 }
@@ -179,14 +179,18 @@
 }
 
 .p3 {
-    grid-row: 4;
+    grid-row: 5;
     grid-column: 1/3;
     justify-self: left;
 }
 .p4 {
-    grid-row: 3;
+    grid-row: 5;
     grid-column: 3/-1;
     justify-self: right;
     /* margin-top: 60px; */
+}
+h2:hover {
+  animation: flip;
+  animation-duration: 3s;
 }
 </style>
