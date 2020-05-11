@@ -1,7 +1,6 @@
-/* eslint-disable */
 <template>
 <transition name="component-fade" mce="in-out" appear>
-    <div id="charSearch">
+    <div id="charSearch" >
         <input v-model="input" type="text" placeholder="Enter Character here..."/>
         <button v-on:click="getCharacter">Search</button>
         <!-- <div id="character"> -->
@@ -19,7 +18,6 @@
             </transition-group>
             </div>
           </ul>
-
         <!-- </div> -->
         <div v-if="showModal" class="modal-route">
           <div class="modal-content">
@@ -56,6 +54,10 @@ export default {
     }
   },
   methods: {
+    tester: function () {
+      alert('hello heloo')
+      console.log('TESTER FUNCTION')
+    },
     getCharacter: function () {
       // makes an api call to a string and returns the result json
       // alert('api fuction called')

@@ -1,5 +1,6 @@
 /* eslint-disable */
 <template>
+<transition name="component-fade" mce="in-out" appear>
 <div class="comic-info">
   <div class="comic-profile">
     <div class="comic-poster">
@@ -33,6 +34,7 @@
     </div>
   </div>
 </div>
+</transition>
 </template>
 
 <script>
@@ -85,7 +87,6 @@ export default {
           console.log(data)
           this.results = data.data.results
           this.allCharacters.push(this.results[0])
-          // console.log(data.data.results[0])
         })
     }
   }

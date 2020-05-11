@@ -1,5 +1,6 @@
 /* eslint-disable */
 <template>
+<transition name="component-fade" mce="in-out" appear>
 <div class="char">
   <div class="char-profile">
     <div class="char-poster">
@@ -37,6 +38,7 @@
     </div>
   </div>
 </div>
+</transition>
 </template>
 
 <script>

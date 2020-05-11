@@ -80,15 +80,14 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  /* padding-bottom: 10px; */
 }
 footer:hover {
-  animation: bounce;
+  animation: rubberBand;
   animation-duration: 2s;
 }
 .component-fade-enter-active {
   animation: fadeInUp;
-  animation-duration: 4s;
+  animation-duration: 2s;
   animation-iteration-count: 1;
 }
 </style>
