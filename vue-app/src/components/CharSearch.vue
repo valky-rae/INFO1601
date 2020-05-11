@@ -1,11 +1,13 @@
 /* eslint-disable */
 <template>
-    <div>
+<transition name="component-fade" mce="in-out" appear>
+    <div id="charSearch">
         <input v-model="input" type="text" placeholder="Enter Character here..."/>
         <button v-on:click="getCharacter">Search</button>
         <!-- <div id="character"> -->
           <ul>
             <div >
+            <transition-group name="component-fade" mce="in-out" appear>
               <router-link
                 v-for="character in results" :key="character.id" id="character"
                 tag="div"
@@ -14,6 +16,7 @@
               >
                   {{ character.name }}<img class="tiles" :src="character.thumbnail.path + '.' + character.thumbnail.extension " width="200" height="200"/>
                 </router-link>
+            </transition-group>
             </div>
           </ul>
 
@@ -24,6 +27,7 @@
         </div>
       </div>
     </div>
+</transition>
 </template>
 
 <script>
@@ -80,6 +84,9 @@ export default {
 </script>
 
 <style scoped>
+#charSearch{
+  margin-top: 3%;
+}
 #character{
   display: inline-block;
   background-color: black;

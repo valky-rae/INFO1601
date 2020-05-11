@@ -1,18 +1,22 @@
 /* eslint-disable */
 <template>
-  <div>
+
+<transition name="component-fade" mce="in-out" appear>
+  <div id="comicSearch">
     <input v-model="input" type="text" placeholder="Enter Comic here..."/>
     <button v-on:click="getComic">Search</button>
     <ul>
       <div>
+        <transition-group name="component-fade" mce="in-out" appear>
         <router-link
           v-for="comic in results" :key="comic.id" id="comic"
           tag="div"
           :to="{ name: 'ComicInfo', params: {comicId: comic.id, comic: comic}}"
           style="background-image: url('https://image.freepik.com/free-vector/blue-halftone-comic-background_23-2147915001.jpg; width: 200px; height:200px')"
         >
-          {{ comic.title }}<img class="tiles" :src="comic.thumbnail.path + '.' + comic.thumbnail.extension " width="200"/>
+          {{ comic.title }}<img class="bounce infinite tiles" :src="comic.thumbnail.path + '.' + comic.thumbnail.extension " width="200"/>
         </router-link>
+        </transition-group>
       </div>
     </ul>
     <div v-if="showModal" class="modal-route">
@@ -21,6 +25,7 @@
       </div>
     </div>
   </div>
+</transition>
 </template>
 
 <script>
@@ -75,6 +80,9 @@ export default {
 </script>
 
 <style scoped>
+#comicSearch{
+  margin-top: 3%;
+}
 #comic{
   display: inline-block;
   background-color: black;
@@ -88,6 +96,10 @@ export default {
   background-image: center;
   background-position: center;
   background-position: cover;
+}
+.tiles :hover {
+  animation: flip; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
 }
 .modal-route {
   width: 100%;

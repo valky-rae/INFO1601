@@ -1,4 +1,5 @@
 <template>
+<transition name="component-fade" mce="in-out" appear>
     <div class="wrapper">
         <div class="card">
         <input type="checkbox" id="card3" class="more">
@@ -37,6 +38,7 @@
         </div>
     </div>
     </div>
+</transition>
 </template>
 
 <style scoped>

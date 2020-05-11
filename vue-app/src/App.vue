@@ -7,9 +7,6 @@
       <router-link class="rounded" to="/about"> About </router-link>
     </div>
     <main>
-      <!-- <div class="lines">
-        <div class="line"> </div>
-      </div> -->
       <router-view/>
     </main>
     <footer>
@@ -41,7 +38,8 @@ body.modal-open {
 #app {
   text-align: center;
   color:white;
-  margin-top: 1%;
+  margin-top: 2%;
+  margin-bottom: 2%;
   font-family: 'Irish Grover', cursive;
   /* background-image: url("../src/assets/rick.png"); */
   /* overflow: scroll; */
@@ -74,8 +72,8 @@ a {
 #navbar a:hover {
   background-color: white;
   color: red;
-  /* text-shadow: 3px 3px red; */
 }
+
 footer {
   font-family: 'Bangers', cursive;
   text-align: center;
@@ -86,8 +84,10 @@ footer {
   width: 100%;
   padding-bottom: 15px;
 }
-#Vlogo{
-  margin-right: 60px;
- float: right;
+.component-fade-enter-active {
+  animation: fadeInUp;
+  animation-duration: 4s;
+  /* animation-delay: 2s; */
+  animation-iteration-count: 1;
 }
 </style>
