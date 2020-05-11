@@ -26,9 +26,9 @@ export default {
 
 <style>
 body{
-  background-image: url("../src/assets/backround.jpg");
-  background-color: black;
-  background-repeat: no-repeat;
+  /* background-image: url("../src/assets/backround.jpg"); */
+  /* background-color: black; */
+  /* background-repeat: no-repeat; */
   background-size: cover;
   overflow-y: scroll;
 }

@@ -16,19 +16,19 @@
                 <div class="inner">
                     <div class="p1">
                         Raeanne Ramharrack <br/>
-                        Lorum epsum dolor sit amet
+                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/3671da38650505.598fa119575fb.jpg" width="100" height="100">
                     </div>
                     <div class="p2">
                         Marc Mungal<br/>
-                        Lorum epsum dolor sit amet
+                        <img src="https://i.pinimg.com/originals/60/7b/a1/607ba1795c55444e38bed385a9272932.png" width="100" height="100">
                     </div>
                     <div class="p3">
                         Matthew Paul <br/>
-                        Lorum epsum dolor sit amet
+                        <img src="https://speckyboy.com/wp-content/uploads/2013/10/flat_heros_05.png" width="100" height="100">
                     </div>
                     <div class="p4">
                         Rajiv Sadho<br/>
-                        Lorum epsum dolor sit amet
+                        <img src="https://genially.blob.core.windows.net/genially/users/58b9bce0da452f24ec369d78/5a8952e58989ee365fef9c9a/5a8952e58989ee365fef9c9b/73f9e047-b1c5-4759-84db-fa163675ff27.png" width="100" height="100">
                     </div>
                     <label for="card3" class="button" aria-hidden="true">
                         Back
@@ -112,18 +112,36 @@
   text-shadow: 0 0 6px red;
 }
 .back {
-  background-image: url("https://www.kidspartyworks.com/images/comic-book-background.jpg");
+  background-image: url("https://static.vecteezy.com/system/resources/previews/000/241/296/original/beautiful-colorful-comic-book-background-illustration-vector.jpg");
   background-position: center center;
   background-size: cover;
   transform: rotateY(180deg);
   border: 6px solid black;
 }
 .back .inner {
+  margin-left: 25%;
+  margin-right: 25%;
   grid-template-rows: 12fr 8fr 2fr 2fr 10fr;
   grid-template-columns: repeat(1, auto);
   /* grid-column-gap: 2.0em; */
   justify-items: center;
   font-size: 20px;
+}
+.p1:hover {
+  animation: tada;
+  animation-duration: 2s;
+}
+.p2:hover {
+  animation: tada;
+  animation-duration: 2s;
+}
+.p3:hover {
+  animation: tada;
+  animation-duration: 2s;
+}
+.p4:hover {
+  animation: tada;
+  animation-duration: 2s;
 }
 .back .button {
   /* grid-column: 2/-1; */
