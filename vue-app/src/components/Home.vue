@@ -1,28 +1,23 @@
 <template>
-    <div>
+    <div id="home">
         <h1> Home page </h1>
-        <div>
-            <router-link class="nav" to="/home/daily"> Daily |</router-link>
-            <router-link class="nav" to="/home/search"> Searchable</router-link>
-        </div>
     </div>
 </template>
 
-<style scoped>
-.nav {
-  padding: 10px;
-  font-size: 25px;
-  font-weight: bold;
-  color: black;
-}
-a {
-    font-weight: bold;
-    color: black;
-    text-decoration:  none;
-    padding-top: 50px;
-    text-align: bottom;
+<script>
+export default {
+  methods: {
+    tester: function () {
+      alert('wow')
+    }
   }
-svg{
-  padding-bottom: 100px;
+}
+</script>
+
+<style scoped>
+#home{
+  margin-left: 5%;
+  text-align: center;
+  overflow: hidden;
 }
 </style>

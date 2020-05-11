@@ -2,8 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import About from '@/components/About'
 import Home from '@/components/Home'
-import Daily from '@/components/Daily'
-import Search from '@/components/Search'
+import CharSearch from '@/components/CharSearch'
+import CharInfo from '@/components/CharInfo'
+import ComicSearch from '@/components/ComicSearch'
+import ComicInfo from '@/components/ComicInfo'
 
 Vue.use(Router)
 
@@ -20,14 +22,39 @@ export default new Router({
       component: Home
     },
     {
-      path: '/home/daily',
-      name: 'Daily',
-      component: Daily
+      path: '/charSearch',
+      name: 'CharSearch',
+      component: CharSearch,
+
+      children: [
+        {
+          meta: {
+            showModal: true
+          },
+          path: ':charId',
+          name: 'CharInfo',
+          component: CharInfo,
+          props: true
+        }
+      ]
+
     },
     {
-      path: '/home/search',
-      name: 'Search',
-      component: Search
+      path: '/comicSearch',
+      name: 'ComicSearch',
+      component: ComicSearch,
+
+      children: [
+        {
+          meta: {
+            showModal: true
+          },
+          path: ':comicId',
+          name: 'ComicInfo',
+          component: ComicInfo,
+          props: true
+        }
+      ]
     }
   ]
 })
