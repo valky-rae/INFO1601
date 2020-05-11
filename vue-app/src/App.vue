@@ -40,9 +40,7 @@ body.modal-open {
   color:white;
   margin-top: 2%;
   margin-bottom: 2%;
-  font-family: 'Irish Grover', cursive;
-  /* background-image: url("../src/assets/rick.png"); */
-  /* overflow: scroll; */
+  font-family: 'Bangers', cursive;
 }
 a {
     font-family: 'Bangers', cursive;
@@ -84,10 +82,13 @@ footer {
   width: 100%;
   padding-bottom: 15px;
 }
+footer:hover {
+  animation: bounce;
+  animation-duration: 2s;
+}
 .component-fade-enter-active {
   animation: fadeInUp;
   animation-duration: 4s;
-  /* animation-delay: 2s; */
   animation-iteration-count: 1;
 }
 </style>

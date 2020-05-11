@@ -69,9 +69,7 @@ export default {
           return response.json()
         })
         .then((data) => {
-          console.log(data)
           this.results = data.data.results
-          // console.log(data.data.results[0])
         })
       // call get comics
     },
@@ -100,6 +98,10 @@ export default {
   background-image: center;
   background-position: center;
   background-position: cover;
+}
+.tiles:hover{
+  animation: pulse;
+  animation-duration: 1s;
 }
 .modal-route {
   width: 100%;

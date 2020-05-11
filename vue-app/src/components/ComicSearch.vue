@@ -56,21 +56,16 @@ export default {
   methods: {
     getComic: function () {
       // makes an api call to a string and returns the result json
-      alert('api fuction called')
       let ts = new Date()
       ts = ts.getUTCMilliseconds()
       let hash = CryptoJS.MD5(ts + this.privateKey + this.publicKey).toString()
       console.log(hash)
       fetch('https://gateway.marvel.com/v1/public/comics?titleStartsWith=' + this.input + '&ts=' + ts + '&apikey=' + this.publicKey + '&hash=' + hash)
-      // fetch('https://gateway.marvel.com/v1/public/comics?titleStartsWith=' + this.input + '&apikey=' + this.publicKey)
         .then((response) => {
           return response.json()
         })
         .then((data) => {
-          console.log(data)
           this.results = data.data.results
-          console.log(typeof this.results)
-          // console.log(data.data.results[0])
         })
       // call get comics
     }
@@ -97,9 +92,9 @@ export default {
   background-position: center;
   background-position: cover;
 }
-.tiles :hover {
-  animation: flip; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 2s; /* don't forget to set a duration! */
+.tiles:hover{
+  animation: pulse;
+  animation-duration: 1s;
 }
 .modal-route {
   width: 100%;
