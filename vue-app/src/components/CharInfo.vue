@@ -104,8 +104,10 @@ export default {
 </script>
 
 <style scoped>
-/* .char {
-} */
+.char {
+  font-family: "K2D", sans-serif;
+  font-size: 12px;
+}
 .char-profile {
     border-radius: 10px;
     border: 5px solid black;

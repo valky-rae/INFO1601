@@ -1,7 +1,7 @@
 <template>
 <transition name="component-fade" mce="in-out" appear>
     <div id="charSearch" >
-        <input v-model="input" type="text" placeholder="Enter Character here..."/>
+        <input class="inputs" v-model="input" type="text" placeholder="Enter Character here..."/>
         <button v-on:click="getCharacter">Search</button>
         <!-- <div id="character"> -->
           <ul>
