@@ -1,6 +1,4 @@
-/* eslint-disable */
 <template>
-
 <transition name="component-fade" mce="in-out" appear>
   <div id="comicSearch">
     <input class="inputs" v-model="input" type="text" placeholder="Enter Comic here..."/>
