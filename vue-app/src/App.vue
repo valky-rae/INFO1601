@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <div id="navbar">
-      <!-- <router-link class="rounded" to="/home"> Home </router-link> -->
       <router-link class="rounded" to="/comicSearch"> Comic Search </router-link>
       <router-link class="rounded" to="/charSearch"> Character Search </router-link>
       <router-link class="rounded" to="/about"> About Us </router-link>
@@ -30,12 +29,8 @@ export default {
   padding: 0;
 }
 body{
-  /* background-image: url("../src/assets/backround.jpg"); */
   background-image: url("https://static.vecteezy.com/system/resources/previews/000/197/422/original/vector-seven-page-empty-comic-book-page-template-background.jpg");
-  /* background-color: black; */
-  /* background-repeat: no-repeat; */
   background-size: cover;
-  /* overflow-x: hidden; */
 }
 body.modal-open {
   overflow: hidden;
@@ -49,7 +44,6 @@ body.modal-open {
 }
 a {
     font-family: 'Bangers', cursive;
-    /* font-family: 'Roboto', sans-serif; */
     color:white;
     text-decoration:  none;
     padding-left: 20px;
@@ -62,17 +56,14 @@ a {
   border-radius: 30px;
   border: 3px solid white;
   background-color: transparent;
-  /* width: 20vw;
-  height: 30px; */
   margin-left: 5px;
   margin-right: 5px;
   padding-top: 5px;
   padding-bottom: 10px;
 }
 #navbar{
-  /* margin-right: 60px; */
   text-align: right;
-  /* text-shadow: 3px 3px black; */
+  text-shadow: 1px 1px black;
   display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -136,7 +127,6 @@ button:hover {
     width: 98%;
     padding: 10px;
     background-color: transparent;
-    /* cursor: not-allowed; */
 }
 .inputs{
     font-family: "K2D", sans-serif;
