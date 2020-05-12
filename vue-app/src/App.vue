@@ -2,7 +2,7 @@
   <div id="app">
     <div id="navbar">
       <router-link class="rounded" to="/comicSearch"> Comic Search </router-link>
-      <router-link class="rounded" to="/charSearch"> Character Search </router-link>
+      <router-link class="fix rounded" to="/charSearch"> Character Search </router-link>
       <router-link class="rounded" to="/about"> About </router-link>
     </div>
     <main>
@@ -25,9 +25,8 @@ export default {
 
 <style>
 body{
-  /* background-image: url("../src/assets/backround.jpg"); */
-  /* background-color: black; */
-  /* background-repeat: no-repeat; */
+  display: flex;
+  flex-direction: column;
   overflow-y: scroll;
   background-image: url("https://static.vecteezy.com/system/resources/previews/000/197/422/original/vector-seven-page-empty-comic-book-page-template-background.jpg");
   background-size: cover;
@@ -46,8 +45,8 @@ a {
     font-family: 'Bangers', cursive;
     color:white;
     text-decoration:  none;
-    padding-left: 20px;
-    padding-right: 16px;
+    padding-left: 2%;
+    padding-right: 2%;
   }
 .rounded {
   font-size: 30px;
@@ -60,12 +59,11 @@ a {
   padding-bottom: 10px;
 }
 #navbar{
-  margin-right: 60px;
-  text-align: right;
+  display: -ms-inline-flexbox;
+  flex-direction: column;
+  margin-bottom: 5%;
+  text-align: center;
   text-shadow: 3px 3px black;
-}
-#navbar :first-child {
-  margin-right: 20px;
 }
 #navbar a:hover {
   background-color: white;
@@ -121,7 +119,7 @@ button:hover {
   }
 }
 .form-control {
-    margin-top: 40px;
+    margin-top: 3%;
     display: inline-block;
     width: 98%;
     padding: 10px;
@@ -136,5 +134,25 @@ button:hover {
     box-shadow: 3px 3px blue;
     border-radius: 20px;
     padding:5px;
+}
+@media screen and (max-width: 520px){
+  /*Mobile Compatibility*/
+  #navbar {
+    flex-direction: column;
+  }
+  #navbar a:hover {
+    background-color: white;
+    color: blue;
+  }
+  #navbar a{
+    display: block;
+    margin-bottom: 2%;
+    justify-content: center;
+    float: center;
+    margin-left: 30%;
+  }
+  .fix {
+    font-size: 23px;
+  }
 }
 </style>
