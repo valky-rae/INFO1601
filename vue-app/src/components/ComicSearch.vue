@@ -90,7 +90,11 @@ export default {
 }
 #tiles-container {
   background-color: rgba(255,255,255,0.75);
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 5vh;
   display:flex;
+  border-radius: 10px;
 }
 .tiles{
   background-image: center;
@@ -133,7 +137,7 @@ export default {
     width: 100%;
   }
   #comic {
-    width: 40%;
+    width: 80%;
   }
 }
 </style>
