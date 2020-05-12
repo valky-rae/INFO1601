@@ -56,11 +56,6 @@ export default {
     }
   },
   created () {
-    // try {
-    //   this.character = this.$parent.character
-    // } catch (error) {
-    //   console.log(error)
-    // }
     if (this.$route.params.charId) {
       this.charId = this.$route.params.charId
     }
@@ -88,14 +83,9 @@ export default {
           return response.json()
         })
         .then((data) => {
-          // console.log(data)
           this.results = data.data.results
-          console.log(this.results)
           this.comic = this.results[0]
           this.allComics.push(this.results[0])
-          console.log(this.allComics[0])
-          console.log(this.comic)
-          // console.log(data.data.results[0])
         })
     }
   }

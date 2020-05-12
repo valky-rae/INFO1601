@@ -53,13 +53,11 @@ export default {
   created () {
     if (this.$route.params.comicId) {
       this.comicId = this.$route.params.comicId
-      console.log(typeof this.comicId)
     } else {
       this.comicId = 0
     }
     if (this.$route.params.comic) {
       this.comic = this.$route.params.comic
-      console.log(typeof this.comic)
     } else {
       this.comic = {}
     }
@@ -79,12 +77,10 @@ export default {
       let hash = CryptoJS.MD5(ts + this.privateKey + this.publicKey).toString()
       console.log(hash)
       fetch(path + '?&ts=' + ts + '&apikey=' + this.publicKey + '&hash=' + hash)
-      // fetch('https://gateway.marvel.com/v1/public/characters?nameStartsWith=' + this.input + '&apikey=' + this.publicKey)
         .then((response) => {
           return response.json()
         })
         .then((data) => {
-          console.log(data)
           this.results = data.data.results
           this.allCharacters.push(this.results[0])
         })
