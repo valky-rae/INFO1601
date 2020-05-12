@@ -36,6 +36,7 @@ body{
   /* background-repeat: no-repeat; */
   background-size: cover;
   /* overflow-x: hidden; */
+  font-size: 1.5rem;
 }
 body.modal-open {
   overflow: hidden;

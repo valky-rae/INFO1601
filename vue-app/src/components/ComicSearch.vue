@@ -6,7 +6,7 @@
     <input v-model="input" type="text" placeholder="Enter Comic here..."/>
     <button v-on:click="getComic">Search</button>
     <!-- <ul> -->
-      <div style="background-color: rgba(255,255,255,0.5);">
+      <div id="tiles-container" style="">
         <transition-group name="component-fade" mce="in-out" appear>
         <router-link
           v-for="comic in results" :key="comic.id" id="comic"
@@ -14,7 +14,7 @@
           :to="{ name: 'ComicInfo', params: {comicId: comic.id, comic: comic}}"
           style="background-image: url('https://image.freepik.com/free-vector/blue-halftone-comic-background_23-2147915001.jpg; width: 200px; height:200px')"
         >
-          {{ comic.title }}<img class="bounce infinite tiles" :src="comic.thumbnail.path + '.' + comic.thumbnail.extension " width="200"/>
+          {{ comic.title }}<img class="bounce infinite tiles" :src="comic.thumbnail.path + '.' + comic.thumbnail.extension " width="200" style="width: 100%"/>
         </router-link>
         </transition-group>
       </div>
@@ -81,11 +81,15 @@ export default {
 #comic{
   display: inline-block;
   background-color: black;
-  height: 200px;
-  width: 200px;
+  /* height: 200px; */
+  /* width: 200px; */
+  width: 15%;
   color: white;
   margin: 20px;
   text-align: center;
+}
+#tiles-container {
+  background-color: rgba(255,255,255,0.75);
 }
 .tiles{
   background-image: center;
@@ -110,6 +114,7 @@ export default {
 }
   .modal-content {
     /* width: 50%; */
+    min-width: 50%;
     position: absolute;
     top: 40%;
     /* left: 50%; */
@@ -120,8 +125,14 @@ export default {
     background: transparent;
   }
 @media screen and (max-width: 600px) {
+  #comic-search {
+    font-size: 1 rem;
+  }
   .modal-content {
     width: 100%;
+  }
+  #comic {
+    width: 40%;
   }
 }
 </style>
