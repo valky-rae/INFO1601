@@ -3,6 +3,9 @@
 <transition name="component-fade" mce="in-out" appear>
 <div class="char">
   <div class="char-profile">
+  <div class="close-container">
+    <router-link to="/comicSearch" class="close">❌</router-link>
+  </div>
     <div class="char-poster">
         <span id="poster-back">
             <img :src="character.thumbnail.path + '.' + character.thumbnail.extension "/>
@@ -168,11 +171,22 @@ export default {
     margin-left: auto;
     margin-right: auto;
 }
-#close {
-    margin-left: auto;
-    flex-grow: 0.1;
-    text-align: right;
-    display: inline-block;
+.close-container {
+  display: flex;
+}
+.close {
+  /* position: absolute; */
+  right: 5vw;
+  /* width:5vw; */
+  height: 3vh;
+  background-color: yellow;
+  margin-left: auto;
+  /* flex-grow: 0.1; */
+  text-align: right;
+  padding-right: 35px;
+  padding-left: 5px;
+  padding-bottom: 0px;
+  /* border-radius: 50%; */
 }
 #heading {
   display: flex;

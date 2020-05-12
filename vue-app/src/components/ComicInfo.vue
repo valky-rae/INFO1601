@@ -2,10 +2,10 @@
 <template>
 <transition name="component-fade" mce="in-out" appear>
 <div class="comic-info">
-  <div class="close-container">
-    <router-link to="/comicSearch" class="close" style="  ">❌</router-link>
-  </div>
   <div class="comic-profile">
+  <div class="close-container">
+    <router-link to="/comicSearch" class="close">❌</router-link>
+  </div>
     <div class="comic-poster">
         <span id="poster-back">
             <img :src="comic.thumbnail.path + '.' + comic.thumbnail.extension "/>
@@ -217,17 +217,25 @@ export default {
   /* position: absolute; */
   right: 5vw;
   /* width:5vw; */
-  height: 5vh;
+  height: 3vh;
   background-color: yellow;
   margin-left: auto;
   /* flex-grow: 0.1; */
   text-align: right;
+  padding-right: 25px;
+  padding-left: 5px;
+  padding-bottom: 0px;
   /* border-radius: 50%; */
 }
 @media screen and (max-width: 600px) {
     .comic-profile {
       display: flex;
       flex-direction: column;
+      margin-top: 30%;
+    }
+    .close {
+      padding-right: 0px;
+      padding-bottom: 0px;
     }
 }
 </style>
