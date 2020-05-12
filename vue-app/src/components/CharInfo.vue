@@ -4,7 +4,7 @@
 <div class="char">
   <div class="char-profile">
   <div class="close-container">
-    <router-link to="/comicSearch" class="close">❌</router-link>
+    <router-link to="/charSearch" class="close">❌</router-link>
   </div>
     <div class="char-poster">
         <span id="poster-back">
@@ -17,7 +17,6 @@
     <div class="char-info">
       <div id="heading">
           <h1>{{  character.name  }}</h1>
-          <router-link to="/charSearch" style="  position: absolute; right: 0;">X</router-link>
       </div>
       <div id="info">
         <span>{{  character.description  }}</span>
@@ -106,7 +105,7 @@ export default {
     border: 5px solid black;
     background-color:red;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     overflow: hidden;
 }
 .char-poster {
@@ -156,6 +155,7 @@ export default {
     border: 5px solid black;
     background-color:red;
     display: flex; */
+    display: flex;
     flex-direction: column;
     padding: 50px;
     text-align: left;
@@ -212,5 +212,21 @@ export default {
   margin: 20px;
   text-align: center;
   background-color:red;
+}
+/* RAE */
+.comics-container{
+  background-color: black;
+  display: block flex;
+}
+@media screen and (max-width: 600px) {
+    .char-profile {
+      display: flex;
+      flex-direction: column;
+      margin-top: 30%;
+    }
+    .close {
+      padding-right: 0px;
+      padding-bottom: 0px;
+    }
 }
 </style>
