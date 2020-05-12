@@ -104,7 +104,7 @@ export default {
 .comic-profile {
     border-radius: 10px;
     border: 5px solid black;
-    background-color:blue;
+    background-color:red;
     display: flex;
     flex-direction: row;
     overflow: hidden;
@@ -193,7 +193,7 @@ export default {
     overflow-y: hidden;
 }
 .creator-container {
-  background-color: blue;
+  background-color:red;
   display: flex;
   flex-direction: column;
 }
@@ -216,6 +216,6 @@ export default {
   width: 200px;
   color: white;
   margin: 20px;
-  background-color: blue;
+  background-color:red;
 }
 </style>
