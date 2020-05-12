@@ -4,7 +4,7 @@
       <!-- <router-link class="rounded" to="/home"> Home </router-link> -->
       <router-link class="rounded" to="/comicSearch"> Comic Search </router-link>
       <router-link class="rounded" to="/charSearch"> Character Search </router-link>
-      <router-link class="rounded" to="/about"> About </router-link>
+      <router-link class="rounded" to="/about"> About Us </router-link>
     </div>
     <main>
       <router-view/>
@@ -49,19 +49,20 @@ body.modal-open {
   font-family: 'Acme', cursive;
 }
 a {
-    /* font-family: 'Bangers', cursive; */
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Bangers', cursive;
+    /* font-family: 'Roboto', sans-serif; */
     color:white;
     text-decoration:  none;
     padding-left: 20px;
     padding-right: 16px;
+    text-align: center;
   }
 .rounded {
   font-size: large;
   color: white;
   border-radius: 30px;
   border: 3px solid white;
-  background-color: blue;
+  background-color: transparent;
   /* width: 20vw;
   height: 30px; */
   margin-left: 5px;
