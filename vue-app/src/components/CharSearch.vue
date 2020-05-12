@@ -5,7 +5,7 @@
         <button v-on:click="getCharacter">Search</button>
         <!-- <div id="character"> -->
           <!-- <ul> -->
-            <div >
+            <div id="tiles-container">
             <transition-group name="component-fade" mce="in-out" appear>
               <router-link
                 v-for="character in results" :key="character.id" id="character"
@@ -91,6 +91,14 @@ export default {
   margin: 20px;
   text-align: center;
 }
+#tiles-container {
+  background-color: rgba(255,255,255,0.75);
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 5vh;
+  display:flex;
+  border-radius: 10px;
+}
 .tiles{
   background-image: center;
   background-position: center;
@@ -135,6 +143,7 @@ export default {
 @media screen and (max-width: 600px) {
   .modal-content {
     width: 100%;
+    height: 100%;
   }
 }
 </style>

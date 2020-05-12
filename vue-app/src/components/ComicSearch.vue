@@ -135,6 +135,7 @@ export default {
   }
   .modal-content {
     width: 100%;
+    height: 100%;
   }
   #comic {
     width: 80%;
