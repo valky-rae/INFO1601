@@ -94,7 +94,7 @@ footer:hover {
 }
 button {
   font-family: "K2D", sans-serif;
-  background-color: transparent;
+  background-color: blue;
   color: white;
   border: 0;
   border-radius: 20px;
@@ -104,7 +104,7 @@ button {
   font-size: 18px;
 }
 button:hover {
-  background: linear-gradient(-90deg, #2a0299, #c225c7);
+  background: linear-gradient(-90deg, #021199, #3d48ac, #8e96dd);
   /* 90b4d2 */
   background-size: 400% 400%;
   animation: gradient 5s ease infinite;
@@ -133,7 +133,7 @@ button:hover {
     font-size: 1.2em;
     line-height: 1.2em;
     border-color: white;
-    box-shadow: 3px 3px white;
+    box-shadow: 3px 3px blue;
     border-radius: 20px;
     padding:5px;
 }
