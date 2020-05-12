@@ -183,7 +183,7 @@ export default {
   margin-left: auto;
   /* flex-grow: 0.1; */
   text-align: right;
-  padding-right: 35px;
+  padding-right: 10px;
   padding-left: 5px;
   padding-bottom: 0px;
   /* border-radius: 50%; */
