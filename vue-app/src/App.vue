@@ -81,7 +81,9 @@ a {
   background-color: white;
   color: red;
 }
-
+*:focus {
+  outline: none;
+}
 footer {
   font-family: 'Bangers', cursive;
   text-align: center;
@@ -99,5 +101,50 @@ footer:hover {
   animation: fadeInUp;
   animation-duration: 2s;
   animation-iteration-count: 1;
+}
+button {
+  font-family: "K2D", sans-serif;
+  background-color: blue;
+  color: white;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 3px 3px white;
+  padding: 10px 15px 10px 15px;
+  font-size: 18px;
+}
+button:hover {
+  background: linear-gradient(-90deg, #021199, #3d48ac, #8e96dd);
+  /* 90b4d2 */
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.form-control {
+    margin-top: 3%;
+    display: inline-block;
+    width: 98%;
+    padding: 10px;
+    background-color: transparent;
+    /* cursor: not-allowed; */
+}
+.inputs{
+    font-family: "K2D", sans-serif;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    border-color: white;
+    box-shadow: 3px 3px blue;
+    border-radius: 20px;
+    padding:5px;
 }
 </style>

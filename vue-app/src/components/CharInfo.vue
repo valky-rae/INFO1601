@@ -56,11 +56,6 @@ export default {
     }
   },
   created () {
-    // try {
-    //   this.character = this.$parent.character
-    // } catch (error) {
-    //   console.log(error)
-    // }
     if (this.$route.params.charId) {
       this.charId = this.$route.params.charId
     }
@@ -88,14 +83,9 @@ export default {
           return response.json()
         })
         .then((data) => {
-          // console.log(data)
           this.results = data.data.results
-          console.log(this.results)
           this.comic = this.results[0]
           this.allComics.push(this.results[0])
-          console.log(this.allComics[0])
-          console.log(this.comic)
-          // console.log(data.data.results[0])
         })
     }
   }
@@ -104,12 +94,14 @@ export default {
 </script>
 
 <style scoped>
-/* .char {
-} */
+.char {
+  font-family: "K2D", sans-serif;
+  font-size: 12px;
+}
 .char-profile {
     border-radius: 10px;
     border: 5px solid black;
-    background-color:blue;
+    background-color:red;
     display: flex;
     flex-direction: row;
     overflow: hidden;
@@ -159,7 +151,7 @@ export default {
 .char-info {
     /* border-radius: 10px;
     border: 5px solid black;
-    background-color:blue;
+    background-color:red;
     display: flex; */
     flex-direction: column;
     padding: 50px;
@@ -205,6 +197,6 @@ export default {
   color: white;
   margin: 20px;
   text-align: center;
-  background-color: blue;
+  background-color:red;
 }
 </style>

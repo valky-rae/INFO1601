@@ -1,9 +1,7 @@
-/* eslint-disable */
 <template>
-
 <transition name="component-fade" mce="in-out" appear>
   <div id="comicSearch">
-    <input v-model="input" type="text" placeholder="Enter Comic here..."/>
+    <input class="inputs" v-model="input" type="text" placeholder="Enter Comic here..."/>
     <button v-on:click="getComic">Search</button>
     <!-- <ul> -->
       <div style="background-color: rgba(255,255,255,0.5);">

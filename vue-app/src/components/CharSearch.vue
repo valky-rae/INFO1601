@@ -1,7 +1,7 @@
 <template>
 <transition name="component-fade" mce="in-out" appear>
     <div id="charSearch" >
-        <input v-model="input" type="text" placeholder="Enter Character here..."/>
+        <input class="inputs" v-model="input" type="text" placeholder="Enter Character here..."/>
         <button v-on:click="getCharacter">Search</button>
         <!-- <div id="character"> -->
           <!-- <ul> -->
@@ -59,14 +59,11 @@ export default {
       console.log('TESTER FUNCTION')
     },
     getCharacter: function () {
-      // makes an api call to a string and returns the result json
-      // alert('api fuction called')
       let ts = new Date()
       ts = ts.getUTCMilliseconds()
       let hash = CryptoJS.MD5(ts + this.privateKey + this.publicKey).toString()
       console.log(hash)
       fetch('https://gateway.marvel.com/v1/public/characters?nameStartsWith=' + this.input + '&ts=' + ts + '&apikey=' + this.publicKey + '&hash=' + hash)
-      // fetch('https://gateway.marvel.com/v1/public/characters?nameStartsWith=' + this.input + '&apikey=' + this.publicKey)
         .then((response) => {
           return response.json()
         })
@@ -75,9 +72,6 @@ export default {
           this.results.sort((a, b) => b.comics.available - a.comics.available)
         })
       // call get comics
-    },
-    getComics: function () {
-      // gets comics related to the given character
     }
   }
 }
