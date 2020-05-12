@@ -2,6 +2,9 @@
 <template>
 <transition name="component-fade" mce="in-out" appear>
 <div class="comic-info">
+  <div class="close-container">
+    <router-link to="/comicSearch" class="close" style="  ">❌</router-link>
+  </div>
   <div class="comic-profile">
     <div class="comic-poster">
         <span id="poster-back">
@@ -14,7 +17,6 @@
     <div class="comic-info">
       <div id="heading">
           <h1>{{  comic.title  }}</h1>
-          <router-link to="/comicSearch" style="  position: absolute; right: 0;">X</router-link>
       </div>
       <div id="info">
         <span>{{  comic.description  }}</span>
@@ -169,12 +171,6 @@ export default {
     margin-left: auto;
     margin-right: auto;
 }
-#close {
-    margin-left: auto;
-    flex-grow: 0.1;
-    text-align: right;
-    display: inline-block;
-}
 #heading {
   display: flex;
   justify-content: center;
@@ -215,5 +211,25 @@ export default {
   color: white;
   margin: 20px;
   background-color: blue;
+}
+.close-container {
+  display: flex;
+}
+.close {
+  /* position: absolute; */
+  right: 5vw;
+  /* width:5vw; */
+  height: 5vh;
+  background-color: yellow;
+  margin-left: auto;
+  /* flex-grow: 0.1; */
+  text-align: right;
+  /* border-radius: 50%; */
+}
+@media screen and (max-width: 600px) {
+    .comic-profile {
+      display: flex;
+      flex-direction: column;
+    }
 }
 </style>

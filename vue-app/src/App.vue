@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="navbar">
-      <router-link class="rounded" to="/home"> Home </router-link>
+      <!-- <router-link class="rounded" to="/home"> Home </router-link> -->
       <router-link class="rounded" to="/comicSearch"> Comic Search </router-link>
       <router-link class="rounded" to="/charSearch"> Character Search </router-link>
       <router-link class="rounded" to="/about"> About </router-link>
@@ -48,17 +48,19 @@ body.modal-open {
   font-family: 'Acme', cursive;
 }
 a {
-    font-family: 'Bangers', cursive;
+    /* font-family: 'Bangers', cursive; */
+    font-family: 'Roboto', sans-serif;
     color:white;
     text-decoration:  none;
     padding-left: 20px;
     padding-right: 16px;
   }
 .rounded {
-  font-size: 2em;
+  font-size: large;
   color: white;
   border-radius: 30px;
   border: 3px solid white;
+  background-color: blue;
   /* width: 20vw;
   height: 30px; */
   margin-left: 5px;
@@ -69,7 +71,7 @@ a {
 #navbar{
   /* margin-right: 60px; */
   text-align: right;
-  text-shadow: 3px 3px black;
+  /* text-shadow: 3px 3px black; */
   display: flex;
   justify-content: flex-end;
   width: 100%;
