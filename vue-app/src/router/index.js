@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import About from '@/components/About'
-import Home from '@/components/Home'
 import CharSearch from '@/components/CharSearch'
 import CharInfo from '@/components/CharInfo'
 import ComicSearch from '@/components/ComicSearch'
@@ -15,11 +14,6 @@ export default new Router({
       path: '/about',
       name: 'About',
       component: About
-    },
-    {
-      path: '/home',
-      name: 'Home',
-      component: Home
     },
     {
       path: '/charSearch',
