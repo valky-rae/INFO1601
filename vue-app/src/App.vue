@@ -128,6 +128,7 @@ button:hover {
     /* cursor: not-allowed; */
 }
 .inputs{
+    font-family: "K2D", sans-serif;
     font-size: 1.2em;
     line-height: 1.2em;
     border-color: white;
