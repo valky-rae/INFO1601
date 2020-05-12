@@ -35,7 +35,6 @@ body{
   /* background-color: black; */
   /* background-repeat: no-repeat; */
   background-size: cover;
-  /* overflow-y: scroll; */
   /* overflow-x: hidden; */
 }
 body.modal-open {
