@@ -4,7 +4,7 @@
         <input v-model="input" type="text" placeholder="Enter Character here..."/>
         <button v-on:click="getCharacter">Search</button>
         <!-- <div id="character"> -->
-          <ul>
+          <!-- <ul> -->
             <div >
             <transition-group name="component-fade" mce="in-out" appear>
               <router-link
@@ -17,7 +17,7 @@
                 </router-link>
             </transition-group>
             </div>
-          </ul>
+          <!-- </ul> -->
         <!-- </div> -->
         <div v-if="showModal" class="modal-route">
           <div class="modal-content">
@@ -72,6 +72,7 @@ export default {
         })
         .then((data) => {
           this.results = data.data.results
+          this.results.sort((a, b) => b.comics.available - a.comics.available)
         })
       // call get comics
     },

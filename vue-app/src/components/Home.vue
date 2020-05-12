@@ -20,7 +20,7 @@ export default {
 <style scoped>
 #home{
   margin-top: 3%;
-  margin-left: 5%;
+  /* margin-left: 5%; */
   text-align: center;
   overflow: hidden;
 }

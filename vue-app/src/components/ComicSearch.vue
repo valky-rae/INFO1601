@@ -5,8 +5,8 @@
   <div id="comicSearch">
     <input v-model="input" type="text" placeholder="Enter Comic here..."/>
     <button v-on:click="getComic">Search</button>
-    <ul>
-      <div>
+    <!-- <ul> -->
+      <div style="background-color: rgba(255,255,255,0.5);">
         <transition-group name="component-fade" mce="in-out" appear>
         <router-link
           v-for="comic in results" :key="comic.id" id="comic"
@@ -18,7 +18,7 @@
         </router-link>
         </transition-group>
       </div>
-    </ul>
+    <!-- </ul> -->
     <div v-if="showModal" class="modal-route">
       <div class="modal-content">
         <router-view></router-view>
