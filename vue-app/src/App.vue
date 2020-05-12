@@ -28,8 +28,9 @@ body{
   /* background-image: url("../src/assets/backround.jpg"); */
   /* background-color: black; */
   /* background-repeat: no-repeat; */
-  background-size: cover;
   overflow-y: scroll;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/000/197/422/original/vector-seven-page-empty-comic-book-page-template-background.jpg");
+  background-size: cover;
 }
 body.modal-open {
   overflow: hidden;
