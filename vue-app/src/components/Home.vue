@@ -2,7 +2,7 @@
 <transition name="component-fade" mce="in-out" appear>
     <div id="home">
         <h1 class="tester"> WELCOME TO GET SCHWIFTY 50 </h1>
-        <h2> testing animations </h2>
+        <h2> Home Of The Comics </h2>
     </div>
 </transition>
 </template>
@@ -26,6 +26,6 @@ export default {
 }
 .tester {
   animation: rotateIn;
-  animation-duration: 5s;
+  animation-duration: 2s;
 }
 </style>

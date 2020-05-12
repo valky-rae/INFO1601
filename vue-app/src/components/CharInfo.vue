@@ -109,7 +109,7 @@ export default {
 .char-profile {
     border-radius: 10px;
     border: 5px solid black;
-    background-color:blue;
+    background-color:red;
     display: flex;
     flex-direction: row;
     overflow: hidden;
@@ -159,7 +159,7 @@ export default {
 .char-info {
     /* border-radius: 10px;
     border: 5px solid black;
-    background-color:blue;
+    background-color:red;
     display: flex; */
     flex-direction: column;
     padding: 50px;
@@ -205,6 +205,6 @@ export default {
   color: white;
   margin: 20px;
   text-align: center;
-  background-color: blue;
+  background-color:red;
 }
 </style>
