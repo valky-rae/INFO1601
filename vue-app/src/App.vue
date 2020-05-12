@@ -31,6 +31,7 @@ export default {
 body{
   background-image: url("https://static.vecteezy.com/system/resources/previews/000/197/422/original/vector-seven-page-empty-comic-book-page-template-background.jpg");
   background-size: cover;
+  font-size: 1.25rem;
 }
 body.modal-open {
   overflow: hidden;
@@ -51,7 +52,7 @@ a {
     text-align: center;
   }
 .rounded {
-  font-size: large;
+  /* font-size: large; */
   color: white;
   border-radius: 30px;
   border: 3px solid white;
@@ -102,7 +103,7 @@ button {
   cursor: pointer;
   box-shadow: 3px 3px white;
   padding: 10px 15px 10px 15px;
-  font-size: 18px;
+  /* font-size: 18px; */
 }
 button:hover {
   background: linear-gradient(-90deg, #021199, #3d48ac, #8e96dd);
@@ -130,7 +131,7 @@ button:hover {
 }
 .inputs{
     font-family: "K2D", sans-serif;
-    font-size: 1.2em;
+    /* font-size: 1.2em; */
     line-height: 1.2em;
     border-color: white;
     box-shadow: 3px 3px blue;

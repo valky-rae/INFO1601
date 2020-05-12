@@ -97,7 +97,7 @@ export default {
   background-color: transparent;
   display: flex;
   font-family: "K2D", sans-serif;
-  font-size: 12px;
+  /* font-size: 12px; */
 }
 .comic-profile {
     border-radius: 10px;

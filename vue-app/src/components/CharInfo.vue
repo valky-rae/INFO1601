@@ -98,7 +98,7 @@ export default {
 <style scoped>
 .char {
   font-family: "K2D", sans-serif;
-  font-size: 12px;
+  /* font-size: 12px; */
 }
 .char-profile {
     border-radius: 10px;
@@ -216,7 +216,7 @@ export default {
 /* RAE */
 .comics-container{
   background-color: black;
-  display: block flex;
+  /* display: block flex; */
 }
 @media screen and (max-width: 600px) {
     .char-profile {
