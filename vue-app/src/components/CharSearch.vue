@@ -109,13 +109,32 @@ export default {
   background:transparent;
   backdrop-filter: blur(5px);
   overflow-y: auto;
+  display: flex;
+  justify-content: center;
 }
-.modal-content {
+/* .modal-content {
   width: 50%;
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%);
   background: transparent;
+} */
+  .modal-content {
+    /* width: 50%; */
+    position: absolute;
+    top: 40%;
+    /* left: 50%; */
+    /* left: auto;
+    right: auto; */
+    /* transform: translate(-50%, -10%); */
+    transform: translate(0, -10%);
+    background: transparent;
+    max-width: 80%;
+  }
+@media screen and (max-width: 600px) {
+  .modal-content {
+    width: 100%;
+  }
 }
 </style>
