@@ -30,6 +30,7 @@
 
 <script>
 import * as CryptoJS from 'crypto-js'
+import web from '../toHttps.js'
 export default {
   watch: {
     $route: {
@@ -66,6 +67,9 @@ export default {
         })
         .then((data) => {
           this.results = data.data.results
+          for (this.el in this.results) {
+            this.results[this.el].thumbnail.path = web.tohttps(this.results[this.el].thumbnail.path)
+          }
         })
       // call get comics
     }

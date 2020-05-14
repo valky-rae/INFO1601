@@ -11,7 +11,7 @@
                 v-for="character in results" :key="character.id" id="character"
                 tag="div"
                 :to="{ name: 'CharInfo', params: {charId: character.id, char: character}}"
-                style="background-image: url('https://image.freepik.com/free-vector/blue-halftone-comic-background_23-2147915001.jpg; width: 200px; height:200px')"
+                style="width: 200px; height:200px')"
               >
                   {{ character.name }}<img class="tiles" :src="character.thumbnail.path + '.' + character.thumbnail.extension " width="200" height="200"/>
                 </router-link>
@@ -70,6 +70,15 @@ export default {
         .then((data) => {
           this.results = data.data.results
           this.results.sort((a, b) => b.comics.available - a.comics.available)
+          console.log(this.results)
+          for (this.el in this.results) {
+            console.log('hi')
+            if (this.results[this.el].thumbnail.path.charAt(4) !== 's') {
+              this.results[this.el].thumbnail.path = this.results[this.el].thumbnail.path.substring(0, 4) + 's' + this.results[this.el].thumbnail.path.substring(4)
+              console.log(this.results[this.el].thumbnail.path)
+              console.log(this.results[this.el].name)
+            }
+          }
         })
       // call get comics
     }

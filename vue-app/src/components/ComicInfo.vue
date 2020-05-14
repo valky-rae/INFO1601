@@ -41,6 +41,7 @@
 
 <script>
 import * as CryptoJS from 'crypto-js'
+import web from '../toHttps.js'
 export default {
   data () {
     return {
@@ -65,6 +66,7 @@ export default {
     }
     if (this.comic.characters.available > 0) {
       for (this.el in this.comic.characters.items) {
+        this.comic.characters.items[this.el].resourceURI = web.tohttps(this.comic.characters.items[this.el].resourceURI)
         this.getCharacter(this.comic.characters.items[this.el].resourceURI)
         console.log(this.comic.characters.items[this.el].resourceURI)
       }
@@ -74,6 +76,9 @@ export default {
     getCharacter: function (path) {
       // makes an api call to a string and returns the result json
       // alert('api fuction called')
+      // if (path.charAt(4) !== 's') {
+      //   path = path.substring(0, 4) + 's' + path.substring(4)
+      // }
       let ts = new Date()
       ts = ts.getUTCMilliseconds()
       let hash = CryptoJS.MD5(ts + this.privateKey + this.publicKey).toString()
@@ -84,6 +89,7 @@ export default {
         })
         .then((data) => {
           this.results = data.data.results
+          this.results[0].thumbnail.path = web.tohttps(this.results[0].thumbnail.path)
           this.allCharacters.push(this.results[0])
         })
     }

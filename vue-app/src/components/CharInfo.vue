@@ -31,7 +31,7 @@
     <div class="char-comics"
       v-for="comics in allComics"
       :key="comics.id"
-      style="background-image: url('https://image.freepik.com/free-vector/blue-halftone-comic-background_23-2147915001.jpg; width: 200px; height:200px')"
+      style="width: 200px; height:200px')"
     >
       {{ comics.title }}<img class="tiles" :src="comics.thumbnail.path + '.' + comics.thumbnail.extension " width="200"/>
     </div>
@@ -45,6 +45,7 @@
 
 <script>
 import * as CryptoJS from 'crypto-js'
+import web from '../toHttps.js'
 export default {
   data () {
     return {
@@ -63,9 +64,12 @@ export default {
     }
     if (this.$route.params.char) {
       this.character = this.$route.params.char
+      this.character.urls[1].url = web.tohttps(this.character.urls[1].url)
+      this.character.urls[2].url = web.tohttps(this.character.urls[2].url)
     }
     if (this.character.comics.available > 0) {
       for (this.el in this.character.comics.items) {
+        this.character.comics.items[this.el].resourceURI = web.tohttps(this.character.comics.items[this.el].resourceURI)
         this.getComic(this.character.comics.items[this.el].resourceURI)
         console.log(this.character.comics.items[this.el].resourceURI)
       }
@@ -87,6 +91,7 @@ export default {
         .then((data) => {
           this.results = data.data.results
           this.comic = this.results[0]
+          this.comic.thumbnail.path = web.tohttps(this.comic.thumbnail.path)
           this.allComics.push(this.results[0])
         })
     }
